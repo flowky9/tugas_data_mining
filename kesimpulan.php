@@ -13,11 +13,11 @@ $lk = mysqli_query($connect,"SELECT * FROM table_1 WHERE jenis_kelamin = 'Laki-L
 $pr_count = mysqli_num_rows($pr);
 $lk_count = mysqli_num_rows($lk);
 
-echo $pr_count;
-echo "<br>";
-echo $lk_count;
-echo "<br>";
-echo $bulan[8];
+// echo $pr_count;
+// echo "<br>";
+// echo $lk_count;
+// echo "<br>";
+// echo $bulan[8];
 
 
 ?>
