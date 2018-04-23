@@ -48,6 +48,7 @@ include("function/connection.php");
             <li><a href="index.php">Home</a></li>
             <li><a href="data_duplicate.php">Data Error</a></li>
             <li><a href="data_bersih.php">Data bersih</a></li>
+            <li><a href="kesimpulan.php">Grafik</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

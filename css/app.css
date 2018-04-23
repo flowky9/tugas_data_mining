@@ -1,3 +1,19 @@
 .data-table {
 	margin-top:100px;
 }
+
+.container-chart {
+                width: 60vh;
+                height: auto;
+                margin: 15px auto;
+            }
+#myChart1 {
+	display: inline;
+	width: 400px;
+	height: auto
+}
+#myChart {
+	display: inline;
+	width: 400px;
+	height: auto
+}

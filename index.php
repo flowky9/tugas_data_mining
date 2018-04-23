@@ -48,6 +48,7 @@ include("function/connection.php");
             <li><a href="index.php">Home</a></li>
             <li><a href="data_duplicate.php">Data Error</a></li>
             <li><a href="data_bersih.php">Data Bersih</a></li>
+            <li><a href="kesimpulan.php">Grafik</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -88,7 +89,7 @@ include("function/connection.php");
             <th><?php echo $row['tgl_daftar']; ?></th>
             <th><?php echo $row['tgl_lahir']; ?></th>
             <th><?php echo $row['umur']; ?></th>
-            <th><?php echo $row['jenis kelamin']; ?></th>
+            <th><?php echo $row['jenis_kelamin']; ?></th>
           </tr>
 
       <?php
