@@ -186,7 +186,6 @@ $lk_count = mysqli_num_rows($lk);
                 },
                 options: {
                   intersect : false,
-                  events: ['click'],
                   tooltips: {
                       mode: 'dataset',
                   }
