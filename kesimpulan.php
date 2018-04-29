@@ -13,11 +13,11 @@ $lk = mysqli_query($connect,"SELECT * FROM table_1 WHERE jenis_kelamin = 'Laki-L
 $pr_count = mysqli_num_rows($pr);
 $lk_count = mysqli_num_rows($lk);
 
-echo $pr_count;
-echo "<br>";
-echo $lk_count;
-echo "<br>";
-echo $bulan[8];
+// echo $pr_count;
+// echo "<br>";
+// echo $lk_count;
+// echo "<br>";
+// echo $bulan[8];
 
 
 ?>
@@ -74,9 +74,11 @@ echo $bulan[8];
     
     <div class="row">
 
-        <div class="container-chart">
-            <canvas id="myChart1" width="100" height="100"></canvas>
-            <canvas id="myChart" width="100" height="100"></canvas>
+        <div class="data-table">
+          <div class="container-chart">
+              <canvas id="myChart1" width="100" height="100"></canvas>
+              <canvas id="myChart" width="100" height="100"></canvas>
+          </div>
         </div>
     </div>
 
@@ -186,7 +188,6 @@ echo $bulan[8];
                 },
                 options: {
                   intersect : false,
-                  events: ['click'],
                   tooltips: {
                       mode: 'dataset',
                   }

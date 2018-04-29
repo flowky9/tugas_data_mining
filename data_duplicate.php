@@ -25,7 +25,7 @@ include("function/connection.php");
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
     <link href="css/dataTables.bootstrap.css" rel="stylesheet">
-    <link href="css/jquery.dataTables.css" rel="stylesheet">
+
 
     
   </head>
