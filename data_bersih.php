@@ -89,7 +89,7 @@ include("function/connection.php");
             <th><?php echo $row['tgl_daftar']; ?></th>
             <th><?php echo $row['tgl_lahir']; ?></th>
             <th><?php echo $row['umur']; ?></th>
-            <th><?php echo $row['jenis kelamin']; ?></th>
+            <th><?php echo $row['jenis_kelamin']; ?></th>
           </tr>
 
       <?php
