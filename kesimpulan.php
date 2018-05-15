@@ -4,12 +4,12 @@ include("function/connection.php");
 $query = mysqli_query($connect,"SELECT * FROM table_1");
 
 for ($i=1; $i <= 12; $i++) { 
-    $query_bulan = mysqli_query($connect,"SELECT * FROM table_1 WHERE MONTH(tgl_daftar) = $i ");
+    $query_bulan = mysqli_query($connect_clean,"SELECT * FROM table_clean_1 WHERE MONTH(tgl_daftar) = $i ");
     $bulan[$i] = mysqli_num_rows($query_bulan);
 }
 
-$pr = mysqli_query($connect,"SELECT * FROM table_1 WHERE jenis_kelamin = 'perempuan'");
-$lk = mysqli_query($connect,"SELECT * FROM table_1 WHERE jenis_kelamin = 'Laki-Laki'");
+$pr = mysqli_query($connect_clean,"SELECT * FROM table_clean_1 WHERE jenis_kelamin = 'Perempuan'");
+$lk = mysqli_query($connect_clean,"SELECT * FROM table_clean_1 WHERE jenis_kelamin = 'Pria'");
 $pr_count = mysqli_num_rows($pr);
 $lk_count = mysqli_num_rows($lk);
 
@@ -33,7 +33,7 @@ $lk_count = mysqli_num_rows($lk);
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Data Mining</title>
+    <title>Kesimpulan</title>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/Chart.bundle.js"></script>
@@ -48,27 +48,7 @@ $lk_count = mysqli_num_rows($lk);
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Tugas Data Mining</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="data_duplicate.php">Data Error</a></li>
-            <li><a href="data_bersih.php">Data Bersih</a></li>
-            <li><a href="kesimpulan.php">Grafik</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+  <?php include('include/nav.php'); ?>
 
     <div class="container">
     

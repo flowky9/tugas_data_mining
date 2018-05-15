@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.8.0
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 21 Apr 2018 pada 16.43
--- Versi Server: 10.1.13-MariaDB
--- PHP Version: 5.6.21
+-- Waktu pembuatan: 15 Bulan Mei 2018 pada 06.01
+-- Versi server: 10.1.31-MariaDB
+-- Versi PHP: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -31,14 +33,14 @@ CREATE TABLE `table_1` (
   `tgl_daftar` date DEFAULT NULL,
   `tgl_lahir` date DEFAULT NULL,
   `umur` int(11) DEFAULT NULL,
-  `jenis kelamin` varchar(9) DEFAULT NULL
+  `jenis_kelamin` varchar(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data untuk tabel `table_1`
 --
 
-INSERT INTO `table_1` (`kd_peserta`, `tgl_daftar`, `tgl_lahir`, `umur`, `jenis kelamin`) VALUES
+INSERT INTO `table_1` (`kd_peserta`, `tgl_daftar`, `tgl_lahir`, `umur`, `jenis_kelamin`) VALUES
 ('1-37-23792 ', '2014-01-01', '2012-03-05', 2, 'Perempuan'),
 ('1-37-28844 ', '2014-08-15', '2013-07-01', 0, 'Perempuan'),
 ('1-37-28844 ', '2014-08-15', '2013-07-01', 0, 'Perempuan'),
@@ -539,6 +541,7 @@ INSERT INTO `table_1` (`kd_peserta`, `tgl_daftar`, `tgl_lahir`, `umur`, `jenis k
 ('1-37-30458 ', '2014-04-01', '2014-02-15', 20, 'Perempuan'),
 ('1-37-30459 ', '2014-04-01', '1992-08-10', 22, 'Perempuan'),
 ('1-37-30460 ', '2014-04-01', '2014-02-28', 0, 'Perempuan');
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
