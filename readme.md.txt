@@ -4,3 +4,5 @@ Database : datamining.table_1, datamining_clean.table_clean_1
 2.Pengubahan Gender yang tidak konsisten => hanya ada Pria dan Perempuan
 3.Update umur 0 tahun menjadi => Tahun daftar - Tahun Lahir
 4.Tgl daftar 0 menjadi => CURDATE()
+5.menghapus umur yang kurang dari 0
+6.umur 0 menjadi hari

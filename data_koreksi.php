@@ -132,6 +132,49 @@ include("include/header.php");
         </tbody>
        </table>
        <strong>Total data error : <?php echo $_SESSION['error_2']; ?></strong>
+
+       <h4>Detail Data Kosong</h4>
+        <table class="table table-striped data">
+          <thead>
+             <tr>
+              <th>No</th>
+              <th>Kode Peserta</th>
+              <th>Tanggal Daftar</th>
+              <th>Tanggal Lahir</th>
+              <th>Umur</th>
+              <th>Jenis Kelamin</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <?php 
+            // DATA KOSONG PISAH
+
+            $query = mysqli_query($connect,"SELECT tgl_daftar AS tgl_daftar_kosong FROM table_1 WHERE tgl_daftar = ''");
+            $query2 = mysqli_query($connect,"SELECT tgl_lahir AS tgl_lahir_kosong FROM table_1 WHERE tgl_lahir = ''");
+            $query3 = mysqli_query($connect,"SELECT umur AS umur_kosong FROM table_1 WHERE umur = ''");
+            $query4 = mysqli_query($connect,"SELECT jenis_kelamin AS jenis_kelamin_kosong FROM table_1 WHERE jenis_kelamin = ''");
+            $query5 = mysqli_query($connect,"SELECT kd_peserta AS kd_peserta FROM table_1 WHERE kd_peserta = ''");
+            $no = 1;
+            $tgl_daftar_kosong = mysqli_num_rows($query);
+            $tgl_lahir_kosong = mysqli_num_rows($query2);
+            $umur_kosong = mysqli_num_rows($query3);
+            $jenis_kelamin_kosong = mysqli_num_rows($query4);
+            $kd_peserta = mysqli_num_rows($query5);
+              
+            ?>
+                
+                <tr>
+                  <th><?php echo $no++; ?></th>
+                  <th><?php echo $kd_peserta; ?></th>
+                  <th><?php echo $tgl_daftar_kosong; ?></th>
+                  <th><?php echo $tgl_lahir_kosong; ?></th>
+                  <th><?php echo $umur_kosong; ?></th>
+                  <th><?php echo $jenis_kelamin_kosong ; ?></th>
+                </tr>
+        </tbody>
+       </table>
+
         <hr>
         <!-- data inkonsisten -->
         <h4>Data Tidak Konsisten</h4>

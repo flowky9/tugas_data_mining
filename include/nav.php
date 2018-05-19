@@ -12,7 +12,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.php?home">Home</a></li>
-            <li><a href="data_duplicate.php?data_invalid">Data Error</a></li>
+            <li><a href="data_koreksi.php?data_invalid">Data Koreksi</a></li>
             <li><a href="data_bersih.php?data_clean">Data Bersih</a></li>
             <li><a href="kesimpulan.php?conclusion">Grafik</a></li>
           </ul>

@@ -39,7 +39,19 @@ include("include/header.php");
             <th><?php echo $row['kd_peserta']; ?></th>
             <th><?php echo $row['tgl_daftar']; ?></th>
             <th><?php echo $row['tgl_lahir']; ?></th>
-            <th><?php echo $row['umur']; ?></th>
+            <th><?php 
+
+              if($row['umur'] == 0 ){
+                $tanggall = new DateTime($row['tgl_lahir']);
+                $tanggal2 = new DateTime($row['tgl_daftar']);
+                
+                $interval = date_diff($tanggall, $tanggal2);
+                echo $interval->format('%R%a hari');
+              }else {
+                echo $row['umur'];
+              }
+
+            ?></th>
             <th><?php echo $row['jenis_kelamin']; ?></th>
           </tr>
 
@@ -53,6 +65,14 @@ include("include/header.php");
       </div>
       </div>
     </div>
+    <?php 
+      $tanggal1 = new DateTime("2011-07-06");
+      $tanggal2 = new DateTime();
+       
+      $perbedaan = $tanggal2->diff($tanggal1)->format("%a");
+       
+      echo $perbedaan;
+     ?>
     </div>
 
     </div><!-- /.container -->
