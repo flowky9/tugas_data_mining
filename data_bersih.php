@@ -65,14 +65,14 @@ include("include/header.php");
       </div>
       </div>
     </div>
-    <?php 
+<!--     <?php 
       $tanggal1 = new DateTime("2011-07-06");
       $tanggal2 = new DateTime();
        
       $perbedaan = $tanggal2->diff($tanggal1)->format("%a");
        
       echo $perbedaan;
-     ?>
+     ?> -->
     </div>
 
     </div><!-- /.container -->

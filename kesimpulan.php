@@ -13,6 +13,12 @@ $lk = mysqli_query($connect_clean,"SELECT * FROM table_clean_1 WHERE jenis_kelam
 $pr_count = mysqli_num_rows($pr);
 $lk_count = mysqli_num_rows($lk);
 
+$data_awal = mysqli_query($connect,"SELECT * FROM table_1");
+$data_awal_c = mysqli_num_rows($data_awal);
+
+$data_akhir = mysqli_query($connect_clean,"SELECT * FROM table_clean_1");
+$data_akhir_c = mysqli_num_rows($data_akhir);
+
 // echo $pr_count;
 // echo "<br>";
 // echo $lk_count;
@@ -60,6 +66,22 @@ $lk_count = mysqli_num_rows($lk);
               <canvas id="myChart" width="100" height="100"></canvas>
           </div>
         </div>
+
+        <table class="table table-striped">
+        <caption>Perbandingan Table</caption>
+            <tr>
+                <th>Data Awal</th>
+                <td><?php echo $data_awal_c; ?></td>
+            </tr>
+            <tr>
+                <th>Data Akhir</th>
+                <td><?php echo $data_akhir_c; ?></td>
+            </tr>
+            <tr>
+                <th>Data Yang di Hapus</th>
+                <td><?php echo $data_awal_c - $data_akhir_c; ?></td>
+            </tr>
+        </table>
     </div>
 
     </div><!-- /.container -->
